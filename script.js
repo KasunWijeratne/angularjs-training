@@ -5,6 +5,7 @@ function getValue() {
 }
 
 document.getElementById("text").addEventListener("change", function (ev) {
+    debugger
     var text = ev.target.value;
     console.log(text);
     var el = document.getElementById('textValue');

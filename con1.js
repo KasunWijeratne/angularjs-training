@@ -1,11 +1,21 @@
 var app = angular.module('app', []);
 
 app.controller('Controller', function ($scope) {
-    // $scope.asdfadfas = '';
-
-    $scope.$watch(function () {
-        console.log($scope.asdfadfas);
-        console.log($scope.checkValue);
-    });
 
 });
+app.controller('BlockController', function ($scope) {
+
+});
+
+app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise("/");
+    debugger;
+
+    $stateProvider
+        .state('Block State' ,
+        {
+            url: 'block',
+            templateUrl: './block.html'
+        })
+}]);
